@@ -1,0 +1,8 @@
+services:
+  shorten.shorten_service:
+    class: Drupal\shorten\Service\ShortenService
+    arguments: ['@http_client', '@config.factory', '@database', '@logger.factory']
+  
+  shorten.filter.shorten_url_filter:
+    class: 'Drupal\shorten\Plugin\Filter\ShortenUrlFilter'
+    arguments: ['@database']

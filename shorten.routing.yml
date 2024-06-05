@@ -1,0 +1,47 @@
+shorten.admin_settings:
+  path: '/admin/config/services/shorten'
+  defaults:
+    _form: '\Drupal\shorten\Form\ShortenSettingsForm'
+    _title: 'Shorten URL settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+shorten.admin_custom_services:
+  path: '/admin/config/services/shorten/custom'
+  defaults:
+    _form: '\Drupal\shorten\Form\ShortenCustomServicesForm'
+    _title: 'Custom URL Shortening Services'
+  requirements:
+    _permission: 'administer site configuration'
+
+shorten.admin_keys:
+  path: '/admin/config/services/shorten/keys'
+  defaults:
+    _form: '\Drupal\shorten\Form\ShortenKeysForm'
+    _title: 'URL Shortening Service API Keys'
+  requirements:
+    _permission: 'administer site configuration'
+
+shorten.admin_report:
+  path: '/admin/reports/shorten'
+  defaults:
+    _controller: '\Drupal\shorten\Controller\ShortenController::report'
+    _title: 'Shorten URL Report'
+  requirements:
+    _permission: 'access content'
+
+shorten.form:
+  path: '/shorten-url'
+  defaults:
+    _form: '\Drupal\shorten\Form\ShortenForm'
+    _title: 'Shorten a URL'
+  requirements:
+    _permission: 'access content'
+
+shorten.admin_clear:
+  path: '/admin/reports/shorten/clear'
+  defaults:
+    _controller: '\Drupal\shorten\Controller\ShortenController::clear'
+    _title: 'Clear Shortened URLs'
+  requirements:
+    _permission: 'administer site configuration'

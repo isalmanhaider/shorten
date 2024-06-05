@@ -1,0 +1,11 @@
+shorten:
+  version: 1.x
+  css:
+    theme:
+      css/shorten.css: {}
+  js:
+    js/shorten.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

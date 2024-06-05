@@ -1,0 +1,11 @@
+name: 'Shorten URL'
+type: module
+description: 'Provides URL shortening services.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:block
+  - drupal:field
+  - drupal:text
+configure: shorten.admin_settings
+version: '1.0'

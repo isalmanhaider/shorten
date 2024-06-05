@@ -1,0 +1,29 @@
+shorten.admin_settings_tab:
+  route_name: shorten.admin_settings
+  title: 'Settings'
+  base_route: shorten.admin_settings
+  weight: 0
+
+shorten.admin_custom_services_tab:
+  route_name: shorten.admin_custom_services
+  title: 'Custom Services'
+  base_route: shorten.admin_settings
+  weight: 1
+
+shorten.admin_keys_tab:
+  route_name: shorten.admin_keys
+  title: 'API Keys'
+  base_route: shorten.admin_settings
+  weight: 2
+
+shorten.admin_report_tab:
+  route_name: shorten.admin_report
+  title: 'Report'
+  base_route: shorten.admin_settings
+  weight: 3
+
+shorten.form_tab:
+  route_name: shorten.form
+  title: 'Shorten a URL'
+  base_route: shorten.admin_settings
+  weight: 4

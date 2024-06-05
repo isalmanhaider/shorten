@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function shorten_install() {
+  $schema = \Drupal::database()->schema();
+
+  // Check if the table exists before attempting to create it.
+  if (!$schema->tableExists('shorten_urls')) {
+    $schema->createTable('shorten_urls', [
+      'fields' => [
+        'id' => [
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ],
+        'original_url' => [
+          'type' => 'varchar',
+          'length' => 2048,
+          'not null' => TRUE,
+        ],
+        'short_url' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'service' => [
+          'type' => 'varchar',
+          'length' => 50,
+          'not null' => TRUE,
+        ],
+        'created' => [
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+      ],
+      'primary key' => ['id'],
+    ]);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function shorten_uninstall() {
+  $schema = \Drupal::database()->schema();
+
+  if ($schema->tableExists('shorten_urls')) {
+    $schema->dropTable('shorten_urls');
+  }
+}

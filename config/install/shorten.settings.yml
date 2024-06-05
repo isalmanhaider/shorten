@@ -1,0 +1,17 @@
+use_www: false
+method: 'php'
+service: 'tinyurl'
+backup_service: 'bitly'
+show_services: true
+timeout: 3
+cache_duration: 1814400
+cache_failure_duration: 1800
+clear_cache_on_drupal_cache_clear: true
+bitly_login: ''
+bitly_api_key: ''
+tinyurl_api_key: ''
+isgd_api_key: ''
+fwd4me_api_key: ''
+redir_api_key: ''
+dubco_api_key: ''
+dubco_workspace_id: ''

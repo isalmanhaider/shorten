@@ -1,0 +1,41 @@
+shorten.admin:
+  title: 'Shorten URLs'
+  description: 'Manage URL shortening settings'
+  parent: system.admin_config_services
+  route_name: shorten.admin_settings
+  weight: 0
+
+shorten.admin_settings:
+  title: 'Shorten URL settings'
+  description: 'Configure the URL shortening settings.'
+  parent: shorten.admin
+  route_name: shorten.admin_settings
+  weight: 1
+
+shorten.admin_custom_services:
+  title: 'Custom URL Shortening Services'
+  description: 'Configure custom URL shortening services.'
+  parent: shorten.admin
+  route_name: shorten.admin_custom_services
+  weight: 2
+
+shorten.admin_keys:
+  title: 'URL Shortening Service API Keys'
+  description: 'Configure the API keys for URL shortening services.'
+  parent: shorten.admin
+  route_name: shorten.admin_keys
+  weight: 3
+
+shorten.admin_report:
+  title: 'Shorten URL Report'
+  description: 'View the report of shortened URLs.'
+  parent: shorten.admin
+  route_name: shorten.admin_report
+  weight: 4
+
+shorten.form:
+  title: 'Shorten a URL'
+  description: 'Access the form to shorten a URL.'
+  parent: shorten.admin
+  route_name: shorten.form
+  weight: 5

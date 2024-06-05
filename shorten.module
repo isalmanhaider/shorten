@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * Implements hook_help().
+ */
+function shorten_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.shorten':
+      return '<p>' . t('Shorten module help text.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form element templates.
+ */
+function shorten_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  if (!empty($element['#form_id'])) {
+    $suggestions[] = 'form_element__' . $element['#form_id'];
+  }
+}
